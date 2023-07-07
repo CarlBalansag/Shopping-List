@@ -190,15 +190,39 @@ function checkUI() {
   isEditMode = false;
 }
 
+
+function onHold() {
+    var element = document.getElementById('clear'),
+        start, 
+        end;
+
+    element.onmousedown = function () {
+      setTimeout(function() { 
+          if (element.onmousedown=true) {
+            console.log("button was on hold for 3 seconds")
+            finishedOnHold();
+          } else {
+            console.log("not on hold for 3 seconds")
+          }
+      }, 2000);
+    };
+
+};
+
+function finishedOnHold() {
+    console.log('function start');
+    clearItems();
+}
+
+
 // Initialize app
 function init() {
   // Event Listeners
   itemForm.addEventListener('submit', onAddItemSubmit);
   itemList.addEventListener('click', onClickItem);
-  clearBtn.addEventListener('click', clearItems);
+  clearBtn.addEventListener('click', onHold);
   itemFilter.addEventListener('input', filterItems);
   document.addEventListener('DOMContentLoaded', displayItems);
-
   checkUI();
 }
 
@@ -215,12 +239,14 @@ IDEAS TO ADD
         ideas === Underline wit the color under the text
         Color on the side of the text
 
-2) To clear Hold for 3 seconds
+2) To clear Hold for 3 seconds COMPLETED COMPLETED COMPLETED COMPLETED COMPLETED
 
 3) Find ways to input errors take away the confirms and alerts
 
 4) set a dark mode light mode theme
 
 5) More interactive
+
+
 
 */
