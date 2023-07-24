@@ -228,25 +228,3 @@ function init() {
 
 init();
 
-/* 
-
-IDEAS TO ADD
-
-1) Priority coloring
-    green not urgent
-    yellow need to do but not urgent
-    red Important
-        ideas === Underline wit the color under the text
-        Color on the side of the text
-
-2) To clear Hold for 3 seconds COMPLETED COMPLETED COMPLETED COMPLETED COMPLETED
-
-3) Find ways to input errors take away the confirms and alerts
-
-4) set a dark mode light mode theme
-
-5) More interactive
-
-
-
-*/
